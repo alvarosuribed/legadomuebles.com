@@ -1518,6 +1518,9 @@ const App = {
     bootstrap() {
         const startTime = performance.now();
 
+        // Agregar clase para indicar que JS está activo
+        document.documentElement.classList.add('js-enabled');
+
         console.log('%c🪑 Legado Muebles', 'font-size: 24px; font-weight: bold; color: #2E5C48;');
         console.log('%cInitializing application...', 'color: #6b7a73;');
 
