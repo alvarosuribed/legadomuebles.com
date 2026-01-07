@@ -1703,79 +1703,74 @@ hr {
 .a-delay-1000 { animation-delay: 1000ms; }
 
 /* ──────────── Scroll Reveal Classes ──────────── */
-/* IMPORTANTE: Contenido visible por defecto, animación opcional */
-.reveal {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
-}
-
-/* Solo aplicar animación si JS está activo y no hay preferencia de movimiento reducido */
-.js-enabled .reveal:not(.reveal--visible) {
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-.reveal--visible {
+/* DESACTIVADO TEMPORALMENTE - Todo visible */
+.reveal,
+.reveal-left,
+.reveal-right,
+.reveal-scale,
+.reveal--visible,
+.reveal-left--visible,
+.reveal-right--visible,
+.reveal-scale--visible {
     opacity: 1 !important;
-    transform: translateY(0) !important;
+    transform: none !important;
+    visibility: visible !important;
 }
 
-.reveal-left {
-    opacity: 1;
-    transform: translateX(0);
-    transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+.js-enabled .reveal:not(.reveal--visible) {
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 .js-enabled .reveal-left:not(.reveal-left--visible) {
-    opacity: 0;
-    transform: translateX(-30px);
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 .reveal-left--visible {
     opacity: 1 !important;
-    transform: translateX(0) !important;
+    transform: none !important;
 }
 
 .reveal-right {
-    opacity: 1;
-    transform: translateX(0);
-    transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 .js-enabled .reveal-right:not(.reveal-right--visible) {
-    opacity: 0;
-    transform: translateX(30px);
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 .reveal-right--visible {
     opacity: 1 !important;
-    transform: translateX(0) !important;
+    transform: none !important;
 }
 
 .reveal-scale {
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 .js-enabled .reveal-scale:not(.reveal-scale--visible) {
-    opacity: 0;
-    transform: scale(0.9);
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 .reveal-scale--visible {
     opacity: 1 !important;
-    transform: scale(1) !important;
+    transform: none !important;
 }
 
-/* Stagger delays for reveal */
-.stagger-1 { transition-delay: 0.1s; }
-.stagger-2 { transition-delay: 0.2s; }
-.stagger-3 { transition-delay: 0.3s; }
-.stagger-4 { transition-delay: 0.4s; }
-.stagger-5 { transition-delay: 0.5s; }
-.stagger-6 { transition-delay: 0.6s; }
+/* Stagger delays - desactivados */
+.stagger-1,
+.stagger-2,
+.stagger-3,
+.stagger-4,
+.stagger-5,
+.stagger-6 { 
+    transition-delay: 0s !important; 
+}
 
 
 /* ═══════════════════════════════════════════════════════════════════════════════
