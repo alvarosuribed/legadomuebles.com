@@ -1703,48 +1703,85 @@ hr {
 .a-delay-1000 { animation-delay: 1000ms; }
 
 /* ──────────── Scroll Reveal Classes ──────────── */
+/* Fallback: mostrar contenido después de 2 segundos si JS no funciona */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+    animation: revealFallback 0.1s ease-out 2s forwards;
+}
+
+@keyframes revealFallback {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .reveal--visible {
     opacity: 1;
     transform: translateY(0);
+    animation: none;
 }
 
 .reveal-left {
     opacity: 0;
     transform: translateX(-30px);
     transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+    animation: revealLeftFallback 0.1s ease-out 2s forwards;
+}
+
+@keyframes revealLeftFallback {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .reveal-left--visible {
     opacity: 1;
     transform: translateX(0);
+    animation: none;
 }
 
 .reveal-right {
     opacity: 0;
     transform: translateX(30px);
     transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+    animation: revealRightFallback 0.1s ease-out 2s forwards;
+}
+
+@keyframes revealRightFallback {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .reveal-right--visible {
     opacity: 1;
     transform: translateX(0);
+    animation: none;
 }
 
 .reveal-scale {
     opacity: 0;
     transform: scale(0.9);
     transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+    animation: revealScaleFallback 0.1s ease-out 2s forwards;
+}
+
+@keyframes revealScaleFallback {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .reveal-scale--visible {
     opacity: 1;
     transform: scale(1);
+    animation: none;
 }
 
 /* Stagger delays for reveal */
