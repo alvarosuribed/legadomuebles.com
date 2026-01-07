@@ -1703,85 +1703,70 @@ hr {
 .a-delay-1000 { animation-delay: 1000ms; }
 
 /* ──────────── Scroll Reveal Classes ──────────── */
-/* Fallback: mostrar contenido después de 2 segundos si JS no funciona */
+/* IMPORTANTE: Contenido visible por defecto, animación opcional */
 .reveal {
-    opacity: 0;
-    transform: translateY(30px);
+    opacity: 1;
+    transform: translateY(0);
     transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
-    animation: revealFallback 0.1s ease-out 2s forwards;
 }
 
-@keyframes revealFallback {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Solo aplicar animación si JS está activo y no hay preferencia de movimiento reducido */
+.js-enabled .reveal:not(.reveal--visible) {
+    opacity: 0;
+    transform: translateY(30px);
 }
 
 .reveal--visible {
-    opacity: 1;
-    transform: translateY(0);
-    animation: none;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
 .reveal-left {
-    opacity: 0;
-    transform: translateX(-30px);
+    opacity: 1;
+    transform: translateX(0);
     transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
-    animation: revealLeftFallback 0.1s ease-out 2s forwards;
 }
 
-@keyframes revealLeftFallback {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.js-enabled .reveal-left:not(.reveal-left--visible) {
+    opacity: 0;
+    transform: translateX(-30px);
 }
 
 .reveal-left--visible {
-    opacity: 1;
-    transform: translateX(0);
-    animation: none;
+    opacity: 1 !important;
+    transform: translateX(0) !important;
 }
 
 .reveal-right {
-    opacity: 0;
-    transform: translateX(30px);
+    opacity: 1;
+    transform: translateX(0);
     transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
-    animation: revealRightFallback 0.1s ease-out 2s forwards;
 }
 
-@keyframes revealRightFallback {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.js-enabled .reveal-right:not(.reveal-right--visible) {
+    opacity: 0;
+    transform: translateX(30px);
 }
 
 .reveal-right--visible {
-    opacity: 1;
-    transform: translateX(0);
-    animation: none;
+    opacity: 1 !important;
+    transform: translateX(0) !important;
 }
 
 .reveal-scale {
-    opacity: 0;
-    transform: scale(0.9);
+    opacity: 1;
+    transform: scale(1);
     transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
-    animation: revealScaleFallback 0.1s ease-out 2s forwards;
 }
 
-@keyframes revealScaleFallback {
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+.js-enabled .reveal-scale:not(.reveal-scale--visible) {
+    opacity: 0;
+    transform: scale(0.9);
 }
 
 .reveal-scale--visible {
-    opacity: 1;
-    transform: scale(1);
-    animation: none;
+    opacity: 1 !important;
+    transform: scale(1) !important;
 }
 
 /* Stagger delays for reveal */
