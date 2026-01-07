@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" class="light">
+<head>
+    <!--
+    ╔══════════════════════════════════════════════════════════════════════════════╗
+    ║  LEGADO MUEBLES - Landing Page v3.0                                          ║
+    ║  ────────────────────────────────────────────────────────────────────────    ║
+    ║  Stack: HTML5 + Tailwind CSS + Vanilla JS                                    ║
+    ║  Architecture: Component-based, Mobile-first, Progressive Enhancement        ║
+    ║  Performance: Core Web Vitals Optimized                                      ║
+    ╚══════════════════════════════════════════════════════════════════════════════╝
+    -->
+    
+    <!-- ═══════════════════ CRITICAL META ═══════════════════ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- ═══════════════════ SEO META ═══════════════════ -->
+    <title>Legado Muebles | Diseño Nórdico & Fabricación a Medida en San Rafael</title>
+    <meta name="description" content="Fábrica de muebles estilo nórdico en San Rafael, Mendoza. Especialistas en cocinas, placares, racks y muebles a medida. Madera maciza, diseño personalizado y calidad artesanal argentina. ¡Consultá sin compromiso!">
+    <meta name="keywords" content="muebles nórdicos, muebles a medida, cocinas San Rafael, placares Mendoza, racks TV, mesitas de luz, mueblería argentina, diseño escandinavo, muebles madera maciza">
+    <meta name="author" content="Legado Muebles">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://legadomuebles.com/">
+    
+    <!-- ═══════════════════ GEO META ═══════════════════ -->
+    <meta name="geo.region" content="AR-M">
+    <meta name="geo.placename" content="San Rafael, Mendoza, Argentina">
+    <meta name="geo.position" content="-34.6177;-68.3301">
+    <meta name="ICBM" content="-34.6177, -68.3301">
+    
+    <!-- ═══════════════════ OPEN GRAPH ═══════════════════ -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Legado Muebles">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:url" content="https://legadomuebles.com/">
+    <meta property="og:title" content="Legado Muebles | Diseño Nórdico & Fabricación a Medida">
+    <meta property="og:description" content="Fábrica de muebles estilo nórdico en San Rafael. Cocinas, placares, racks y muebles a medida con madera maciza.">
+    <meta property="og:image" content="https://legadomuebles.com/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Legado Muebles - Muebles Nórdicos Argentinos">
+    
+    <!-- ═══════════════════ TWITTER CARD ═══════════════════ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@legadomuebles">
+    <meta name="twitter:title" content="Legado Muebles | Diseño Nórdico & Fabricación a Medida">
+    <meta name="twitter:description" content="Muebles estilo nórdico fabricados a medida en San Rafael, Mendoza.">
+    <meta name="twitter:image" content="https://legadomuebles.com/assets/og-image.jpg">
+    
+    <!-- ═══════════════════ PWA & MOBILE ═══════════════════ -->
+    <meta name="theme-color" content="#2E5C48" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0F1211" media="(prefers-color-scheme: dark)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Legado">
+    <meta name="application-name" content="Legado Muebles">
+    <meta name="msapplication-TileColor" content="#2E5C48">
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- ═══════════════════ FAVICON ═══════════════════ -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2E5C48">
+    
+    <!-- ═══════════════════ PRECONNECT & PRELOAD ═══════════════════ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1920&auto=format&fit=crop" fetchpriority="high">
+    
+    <!-- ═══════════════════ FONTS ═══════════════════ -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+    
+    <!-- ═══════════════════ TAILWIND CSS ═══════════════════ -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f7f4',
+                            100: '#d9ebe3',
+                            200: '#b5d7c8',
+                            300: '#87bba6',
+                            400: '#5a9a81',
+                            500: '#2E5C48',
+                            600: '#2a5341',
+                            700: '#234436',
+                            800: '#1e3d30',
+                            900: '#172e24',
+                            950: '#0c1a14',
+                            DEFAULT: '#2E5C48'
+                        },
+                        secondary: {
+                            50: '#fdf8f3',
+                            100: '#f9ede0',
+                            200: '#f2d9bf',
+                            300: '#e9c094',
+                            400: '#D4A373',
+                            500: '#c48b55',
+                            600: '#b67543',
+                            700: '#975d38',
+                            800: '#7a4c33',
+                            900: '#64402c',
+                            DEFAULT: '#D4A373'
+                        },
+                        neutral: {
+                            bg: { light: '#F5F7F6', dark: '#0F1211' },
+                            surface: { light: '#FFFFFF', dark: '#181C1A' },
+                            card: { light: '#FAFBFB', dark: '#1E2321' },
+                            border: { light: 'rgba(0,0,0,0.06)', dark: 'rgba(255,255,255,0.06)' }
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'system-ui', '-apple-system', 'sans-serif'],
+                        display: ['Manrope', 'system-ui', 'sans-serif']
+                    },
+                    fontSize: {
+                        '2xs': ['0.625rem', { lineHeight: '0.875rem' }],
+                        '3xl': ['1.875rem', { lineHeight: '2.25rem', letterSpacing: '-0.02em' }],
+                        '4xl': ['2.25rem', { lineHeight: '2.5rem', letterSpacing: '-0.02em' }],
+                        '5xl': ['3rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+                        '6xl': ['3.75rem', { lineHeight: '1.05', letterSpacing: '-0.025em' }],
+                        '7xl': ['4.5rem', { lineHeight: '1', letterSpacing: '-0.025em' }]
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                        '22': '5.5rem',
+                        '30': '7.5rem',
+                        '34': '8.5rem',
+                        '128': '32rem',
+                        '144': '36rem'
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '2.5rem'
+                    },
+                    boxShadow: {
+                        'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
+                        'medium': '0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 30px -5px rgba(0, 0, 0, 0.04)',
+                        'strong': '0 10px 40px -10px rgba(0, 0, 0, 0.15), 0 20px 50px -15px rgba(0, 0, 0, 0.1)',
+                        'glow-primary': '0 0 30px -5px rgba(46, 92, 72, 0.4)',
+                        'glow-secondary': '0 0 30px -5px rgba(212, 163, 115, 0.4)',
+                        'inner-glow': 'inset 0 1px 0 0 rgba(255,255,255,0.1)'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-out forwards',
+                        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+                        'fade-in-down': 'fadeInDown 0.5s ease-out forwards',
+                        'slide-in-left': 'slideInLeft 0.5s ease-out forwards',
+                        'slide-in-right': 'slideInRight 0.5s ease-out forwards',
+                        'scale-in': 'scaleIn 0.4s ease-out forwards',
+                        'float': 'float 4s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                        'bounce-subtle': 'bounceSubtle 2s ease-in-out infinite',
+                        'shimmer': 'shimmer 2s linear infinite',
+                        'spin-slow': 'spin 3s linear infinite',
+                        'ping-slow': 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(24px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-16px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideInLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(-24px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' }
+                        },
+                        slideInRight: {
+                            '0%': { opacity: '0', transform: 'translateX(24px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' }
+                        },
+                        scaleIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.95)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-12px)' }
+                        },
+                        bounceSubtle: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-6px)' }
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' }
+                        }
+                    },
+                    transitionTimingFunction: {
+                        'out-expo': 'cubic-bezier(0.16, 1, 0.3, 1)',
+                        'out-back': 'cubic-bezier(0.34, 1.56, 0.64, 1)',
+                        'in-out-back': 'cubic-bezier(0.68, -0.6, 0.32, 1.6)'
+                    },
+                    transitionDuration: {
+                        '400': '400ms',
+                        '600': '600ms',
+                        '800': '800ms'
+                    },
+                    zIndex: {
+                        '60': '60',
+                        '70': '70',
+                        '80': '80',
+                        '90': '90',
+                        '100': '100'
+                    },
+                    screens: {
+                        'xs': '475px',
+                        '3xl': '1920px'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- ═══════════════════ CRITICAL CSS ═══════════════════ -->
+    <style>
+        /* ══════════ BASE CRITICAL ══════════ */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { 
+            scroll-behavior: smooth; 
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+        body {
+            font-family: 'Manrope', system-ui, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            overflow-x: hidden;
+            background-color: #F5F7F6;
+            color: #1A201E;
+        }
+        .dark body {
+            background-color: #0F1211;
+            color: #E8EDEB;
+        }
+        
+        /* ══════════ GLASS MORPHISM ══════════ */
+        .glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+        }
+        .dark .glass {
+            background: rgba(24, 28, 26, 0.9);
+        }
+        .glass-strong {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(24px) saturate(200%);
+            -webkit-backdrop-filter: blur(24px) saturate(200%);
+        }
+        .dark .glass-strong {
+            background: rgba(15, 18, 17, 0.95);
+        }
+        
+        /* ══════════ SCROLLBAR ══════════ */
+        ::-webkit-scrollbar { width: 10px; height: 10px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { 
+            background: #b5c4bd; 
+            border-radius: 10px;
+            border: 2px solid transparent;
+            background-clip: content-box;
+        }
+        ::-webkit-scrollbar-thumb:hover { background: #2E5C48; }
+        .dark ::-webkit-scrollbar-thumb { background: #3a4a44; }
+        .dark ::-webkit-scrollbar-thumb:hover { background: #5a9a81; }
+        
+        /* Hide scrollbar for carousels */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* ══════════ FOCUS & ACCESSIBILITY ══════════ */
+        :focus-visible {
+            outline: 2px solid #2E5C48;
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+        :focus:not(:focus-visible) { outline: none; }
+        
+        .dark :focus-visible {
+            outline-color: #D4A373;
+        }
+        
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9999;
+            transition: top 0.3s ease;
+        }
+        .skip-link:focus {
+            top: 1rem;
+        }
+        
+        /* ══════════ SELECTION ══════════ */
+        ::selection {
+            background-color: #2E5C48;
+            color: white;
+        }
+        .dark ::selection {
+            background-color: #D4A373;
+            color: #0F1211;
+        }
+        
+        /* ══════════ LOADING STATES ══════════ */
+        .skeleton {
+            background: linear-gradient(90deg, #e8ecea 0%, #f5f7f6 50%, #e8ecea 100%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        .dark .skeleton {
+            background: linear-gradient(90deg, #1e2422 0%, #2a302e 50%, #1e2422 100%);
+            background-size: 200% 100%;
+        }
+        
+        .spinner {
+            width: 24px;
+            height: 24px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-top-color: currentColor;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        
+        /* ══════════ SCROLL PROGRESS ══════════ */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #2E5C48, #5a9a81, #D4A373);
+            z-index: 9999;
+            transform-origin: left;
+            transform: scaleX(var(--scroll-progress, 0));
+            will-change: transform;
+        }
+        
+        /* ══════════ CARD EFFECTS ══════════ */
+        .card-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-glow {
+            transition: box-shadow 0.3s ease;
+        }
+        .card-glow:hover {
+            box-shadow: 0 0 40px -10px rgba(46, 92, 72, 0.3);
+        }
+        .dark .card-glow:hover {
+            box-shadow: 0 0 40px -10px rgba(212, 163, 115, 0.3);
+        }
+        
+        /* ══════════ IMAGE EFFECTS ══════════ */
+        .img-zoom {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .group:hover .img-zoom {
+            transform: scale(1.08);
+        }
+        
+        .img-parallax {
+            will-change: transform;
+        }
+        
+        /* ══════════ LIGHTBOX ══════════ */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .lightbox__img {
+            max-width: 90vw;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 8px;
+            transform: scale(0.9);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .lightbox.active .lightbox__img {
+            transform: scale(1);
+        }
+        
+        /* ══════════ TOAST ══════════ */
+        .toast {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: #1A201E;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+            z-index: 9998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .toast.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+        .dark .toast {
+            background: white;
+            color: #1A201E;
+        }
+        
+        /* ══════════ GRADIENT TEXT ══════════ */
+        .gradient-text {
+            background: linear-gradient(135deg, #2E5C48 0%, #5a9a81 50%, #2E5C48 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-text-warm {
+            background: linear-gradient(135deg, #D4A373 0%, #e9c094 50%, #D4A373 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* ══════════ PILL STATES ══════════ */
+        .pill {
+            transition: all 0.2s ease;
+        }
+        .pill:hover:not(.pill--active) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .pill--active {
+            background-color: #2E5C48 !important;
+            color: white !important;
+            border-color: #2E5C48 !important;
+            box-shadow: 0 4px 20px rgba(46, 92, 72, 0.3);
+        }
+        
+        /* ══════════ BUTTON EFFECTS ══════════ */
+        .btn-shine {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-shine::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn-shine:hover::after {
+            left: 100%;
+        }
+        
+        /* ══════════ SCROLL ANIMATIONS ══════════ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal-left.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal-right.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal-scale.revealed {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        /* ══════════ STAGGER DELAYS ══════════ */
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        .stagger-6 { transition-delay: 0.6s; }
+        
+        /* ══════════ REDUCED MOTION ══════════ */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .reveal, .reveal-left, .reveal-right, .reveal-scale {
+                opacity: 1;
+                transform: none;
+            }
+        }
+        
+        /* ══════════ PRINT STYLES ══════════ */
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white; color: black; }
+            .dark body { background: white; color: black; }
+        }
+    </style>
+    
+    <!-- ═══════════════════ STRUCTURED DATA ═══════════════════ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LocalBusiness",
+                "@id": "https://legadomuebles.com/#business",
+                "name": "Legado Muebles",
+                "alternateName": "Legado Muebles San Rafael",
+                "description": "Fábrica de muebles estilo nórdico. Especialistas en cocinas, placares, racks y muebles a medida con madera maciza.",
+                "url": "https://legadomuebles.com",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://legadomuebles.com/assets/logo.png",
+                    "width": 512,
+                    "height": 512
+                },
+                "image": [
+                    "https://legadomuebles.com/assets/og-image.jpg",
+                    "https://legadomuebles.com/assets/gallery/cocina-1.jpg",
+                    "https://legadomuebles.com/assets/gallery/living-1.jpg"
+                ],
+                "telephone": "+5492604364497",
+                "email": "contacto@legadomuebles.com",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Av. Mitre 839",
+                    "addressLocality": "San Rafael",
+                    "addressRegion": "Mendoza",
+                    "postalCode": "5600",
+                    "addressCountry": "AR"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": -34.6177,
+                    "longitude": -68.3301
+                },
+                "hasMap": "https://maps.google.com/?q=Av.+Mitre+839,+San+Rafael,+Mendoza,+Argentina",
+                "openingHoursSpecification": [
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                        "opens": "09:00",
+                        "closes": "13:00"
+                    },
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                        "opens": "17:00",
+                        "closes": "21:00"
+                    }
+                ],
+                "priceRange": "$$",
+                "currenciesAccepted": "ARS",
+                "paymentAccepted": ["Efectivo", "Transferencia Bancaria", "Tarjeta de Crédito", "Tarjeta de Débito"],
+                "areaServed": [
+                    {
+                        "@type": "City",
+                        "name": "San Rafael"
+                    },
+                    {
+                        "@type": "State",
+                        "name": "Mendoza"
+                    }
+                ],
+                "sameAs": [
+                    "https://www.instagram.com/legadomuebles",
+                    "https://www.facebook.com/legadomuebles"
+                ],
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.9",
+                    "reviewCount": "147",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "review": [
+                    {
+                        "@type": "Review",
+                        "author": { "@type": "Person", "name": "María José L." },
+                        "datePublished": "2024-11-15",
+                        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+                        "reviewBody": "Excelente atención y calidad. La mesa de comedor quedó perfecta."
+                    }
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://legadomuebles.com/#website",
+                "url": "https://legadomuebles.com",
+                "name": "Legado Muebles",
+                "description": "Muebles nórdicos a medida en San Rafael, Mendoza",
+                "publisher": { "@id": "https://legadomuebles.com/#business" },
+                "inLanguage": "es-AR",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://legadomuebles.com/buscar?q={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://legadomuebles.com/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Inicio",
+                        "item": "https://legadomuebles.com"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "¿Hacen muebles a medida?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Sí, nos especializamos en fabricar muebles a medida. Cocinas, placares, racks y todo tipo de mobiliario adaptado a tus necesidades y espacio."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "¿Qué materiales utilizan?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Trabajamos con melamina MDF 18mm, maderas macizas como Petiribí, Paraíso y Guayubira, y acabados laqueados de alta calidad."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "¿Realizan envíos a otras provincias?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Sí, realizamos envíos a todo el país. Consultanos para conocer costos y tiempos de entrega a tu ubicación."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body class="bg-neutral-bg-light dark:bg-neutral-bg-dark text-gray-900 dark:text-gray-100 antialiased">
+    
+    <!-- ═══════════════════ SKIP LINK ═══════════════════ -->
+    <a href="#main" class="skip-link bg-primary-500 text-white px-6 py-3 rounded-xl font-bold shadow-xl">
+        Saltar al contenido principal
+    </a>
+    
+    <!-- ═══════════════════ SCROLL PROGRESS ═══════════════════ -->
+    <div class="scroll-progress no-print" aria-hidden="true"></div>
+    
+    <!-- ═══════════════════ OFFLINE INDICATOR ═══════════════════ -->
+    <div id="offline-banner" class="fixed top-0 left-0 right-0 bg-amber-500 text-white text-center py-2 text-sm font-semibold z-[100] hidden" role="alert">
+        <span class="material-symbols-outlined text-sm align-middle mr-1" aria-hidden="true">wifi_off</span>
+        Sin conexión - Mostrando contenido guardado
+    </div>
+
+    <!-- ╔══════════════════════════════════════════════════════════════════════╗
+         ║                           HEADER                                     ║
+         ╚══════════════════════════════════════════════════════════════════════╝ -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <!-- Header Background -->
+        <div id="header-bg" class="glass absolute inset-0 opacity-0 transition-opacity duration-300 border-b border-black/[0.04] dark:border-white/[0.04]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="flex items-center justify-between h-20 lg:h-22">
+                
+                <!-- ══════════ LOGO ══════════ -->
+                <a href="/" class="flex items-center gap-3 group relative z-10" aria-label="Legado Muebles - Inicio">
+                    <div class="relative">
+                        <div class="w-11 h-11 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary-500/25 group-hover:shadow-xl group-hover:shadow-primary-500/30 group-hover:scale-105 transition-all duration-300">
+                            <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">chair</span>
+                        </div>
+                        <div class="absolute -bottom-1 -right-1 w-4 h-4 bg-secondary-400 rounded-full border-2 border-white dark:border-neutral-bg-dark opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 transition-all duration-300"></div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-extrabold tracking-tight text-primary-600 dark:text-white leading-none">LEGADO</span>
+                        <span class="text-2xs font-bold tracking-[0.25em] uppercase text-secondary-500">Muebles</span>
+                    </div>
+                </a>
+                
+                <!-- ══════════ NAVIGATION DESKTOP ══════════ -->
+                <nav class="hidden lg:flex items-center gap-1" role="navigation" aria-label="Navegación principal">
+                    <a href="#inicio" class="nav-link px-4 py-2 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-white rounded-lg hover:bg-black/[0.03] dark:hover:bg-white/[0.05] transition-all duration-200" data-section="inicio">Inicio</a>
+                    <a href="#productos" class="nav-link px-4 py-2 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-white rounded-lg hover:bg-black/[0.03] dark:hover:bg-white/[0.05] transition-all duration-200" data-section="productos">Productos</a>
+                    <a href="#amedida" class="nav-link px-4 py-2 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-white rounded-lg hover:bg-black/[0.03] dark:hover:bg-white/[0.05] transition-all duration-200" data-section="amedida">A Medida</a>
+                    <a href="#galeria" class="nav-link px-4 py-2 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-white rounded-lg hover:bg-black/[0.03] dark:hover:bg-white/[0.05] transition-all duration-200" data-section="galeria">Galería</a>
+                    <a href="#testimonios" class="nav-link px-4 py-2 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-white rounded-lg hover:bg-black/[0.03] dark:hover:bg-white/[0.05] transition-all duration-200" data-section="testimonios">Testimonios</a>
+                    <a href="#contacto" class="nav-link px-4 py-2 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-white rounded-lg hover:bg-black/[0.03] dark:hover:bg-white/[0.05] transition-all duration-200" data-section="contacto">Contacto</a>
+                </nav>
+                
+                <!-- ══════════ HEADER ACTIONS ══════════ -->
+                <div class="flex items-center gap-1 sm:gap-2">
+                    <!-- Search -->
+                    <button id="search-btn" class="p-2.5 text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-white hover:bg-black/[0.03] dark:hover:bg-white/[0.05] rounded-full transition-all duration-200" aria-label="Abrir búsqueda" aria-haspopup="dialog">
+                        <span class="material-symbols-outlined text-xl" aria-hidden="true">search</span>
+                    </button>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2.5 text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-white hover:bg-black/[0.03] dark:hover:bg-white/[0.05] rounded-full transition-all duration-200" aria-label="Cambiar tema" aria-pressed="false">
+                        <span class="material-symbols-outlined text-xl block dark:hidden" aria-hidden="true">dark_mode</span>
+                        <span class="material-symbols-outlined text-xl hidden dark:block" aria-hidden="true">light_mode</span>
+                    </button>
+                    
+                    <!-- CTA Button -->
+                    <a href="#cotizador" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30 hover:-translate-y-0.5 transition-all duration-300 btn-shine">
+                        <span>Cotizar</span>
+                        <span class="material-symbols-outlined text-lg" aria-hidden="true">arrow_forward</span>
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="lg:hidden p-2.5 text-gray-700 dark:text-white hover:bg-black/[0.03] dark:hover:bg-white/[0.05] rounded-full transition-all duration-200" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+                        <span class="material-symbols-outlined text-2xl" id="mobile-menu-icon" aria-hidden="true">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ══════════ MOBILE MENU ══════════ -->
+        <div id="mobile-menu" class="lg:hidden hidden fixed inset-0 top-20 bg-neutral-surface-light dark:bg-neutral-surface-dark z-40 overflow-y-auto" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+            <nav class="flex flex-col p-5 gap-2 max-w-lg mx-auto">
+                <a href="#inicio" class="mobile-nav-link flex items-center gap-4 p-4 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 group">
+                    <span class="w-10 h-10 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-lg flex items-center justify-center group-hover:bg-primary-200 dark:group-hover:bg-primary-900/50 transition-colors">
+                        <span class="material-symbols-outlined" aria-hidden="true">home</span>
+                    </span>
+                    Inicio
+                </a>
+                <a href="#productos" class="mobile-nav-link flex items-center gap-4 p-4 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 group">
+                    <span class="w-10 h-10 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-lg flex items-center justify-center group-hover:bg-primary-200 dark:group-hover:bg-primary-900/50 transition-colors">
+                        <span class="material-symbols-outlined" aria-hidden="true">grid_view</span>
+                    </span>
+                    Productos
+                </a>
+                <a href="#amedida" class="mobile-nav-link flex items-center gap-4 p-4 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 group">
+                    <span class="w-10 h-10 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-lg flex items-center justify-center group-hover:bg-primary-200 dark:group-hover:bg-primary-900/50 transition-colors">
+                        <span class="material-symbols-outlined" aria-hidden="true">design_services</span>
+                    </span>
+                    A Medida
+                </a>
+                <a href="#galeria" class="mobile-nav-link flex items-center gap-4 p-4 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 group">
+                    <span class="w-10 h-10 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-lg flex items-center justify-center group-hover:bg-primary-200 dark:group-hover:bg-primary-900/50 transition-colors">
+                        <span class="material-symbols-outlined" aria-hidden="true">photo_library</span>
+                    </span>
+                    Galería
+                </a>
+                <a href="#testimonios" class="mobile-nav-link flex items-center gap-4 p-4 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 group">
+                    <span class="w-10 h-10 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-lg flex items-center justify-center group-hover:bg-primary-200 dark:group-hover:bg-primary-900/50 transition-colors">
+                        <span class="material-symbols-outlined" aria-hidden="true">format_quote</span>
+                    </span>
+                    Testimonios
+                </a>
+                <a href="#contacto" class="mobile-nav-link flex items-center gap-4 p-4 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 group">
+                    <span class="w-10 h-10 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-lg flex items-center justify-center group-hover:bg-primary-200 dark:group-hover:bg-primary-900/50 transition-colors">
+                        <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                    </span>
+                    Contacto
+                </a>
+                
+                <hr class="border-gray-200 dark:border-gray-700 my-4">
+                
+                <a href="#cotizador" class="flex items-center justify-center gap-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white p-4 rounded-xl font-bold text-center shadow-lg shadow-primary-500/25 hover:shadow-xl transition-all duration-300">
+                    <span class="material-symbols-outlined" aria-hidden="true">calculate</span>
+                    Solicitar Presupuesto
+                </a>
+                
+                <!-- Mobile Menu Footer -->
+                <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+                    <div class="flex items-center justify-center gap-4">
+                        <a href="https://instagram.com/legadomuebles" target="_blank" rel="noopener noreferrer" class="w-11 h-11 bg-gray-100 dark:bg-gray-800 hover:bg-primary-100 dark:hover:bg-primary-900/30 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all" aria-label="Instagram">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://facebook.com/legadomuebles" target="_blank" rel="noopener noreferrer" class="w-11 h-11 bg-gray-100 dark:bg-gray-800 hover:bg-primary-100 dark:hover:bg-primary-900/30 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all" aria-label="Facebook">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://wa.me/5492604364497" target="_blank" rel="noopener noreferrer" class="w-11 h-11 bg-gray-100 dark:bg-gray-800 hover:bg-green-100 dark:hover:bg-green-900/30 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-all" aria-label="WhatsApp">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                    </div>
+                    <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-4">
+                        +54 9 260 436-4497
+                    </p>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ╔══════════════════════════════════════════════════════════════════════╗
+         ║                       SEARCH MODAL                                   ║
+         ╚══════════════════════════════════════════════════════════════════════╝ -->
+    <div id="search-modal" class="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300" role="dialog" aria-modal="true" aria-label="Buscar productos">
+        <div class="flex items-start justify-center pt-20 sm:pt-28 px-4">
+            <div id="search-container" class="bg-neutral-surface-light dark:bg-neutral-surface-dark w-full max-w-2xl rounded-2xl shadow-2xl transform scale-95 transition-all duration-300 overflow-hidden">
+                <!-- Search Input -->
+                <div class="p-4 border-b border-gray-100 dark:border-gray-800">
+                    <div class="relative">
+                        <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true">search</span>
+                        <input type="search" id="search-input" class="w-full pl-12 pr-12 py-4 text-lg bg-transparent border-0 focus:ring-0 placeholder:text-gray-400 dark:placeholder:text-gray-500" placeholder="Buscar productos, categorías..." autocomplete="off" autofocus>
+                        <button id="search-close" class="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" aria-label="Cerrar búsqueda">
+                            <span class="material-symbols-outlined text-xl" aria-hidden="true">close</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Search Results -->
+                <div id="search-results" class="max-h-[60vh] overflow-y-auto p-4">
+                    <p class="text-center text-gray-500 dark:text-gray-400 py-12">
+                        <span class="material-symbols-outlined text-4xl mb-3 block opacity-50" aria-hidden="true">search</span>
+                        Escribí para buscar productos...
+                    </p>
+                </div>
+                
+                <!-- Search Footer -->
+                <div class="p-4 border-t border-gray-100 dark:border-gray-800 text-xs text-gray-500 dark:text-gray-400 flex flex-wrap items-center justify-between gap-2">
+                    <span class="flex items-center gap-2">
+                        <kbd class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded font-mono">ESC</kbd> para cerrar
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <kbd class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded font-mono">↵</kbd> para seleccionar
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ╔══════════════════════════════════════════════════════════════════════╗
+         ║                         MAIN CONTENT                                 ║
+         ╚══════════════════════════════════════════════════════════════════════╝ -->
+    <main id="main" class="pt-20 lg:pt-22">
+        
+        <!-- ═══════════════════ HERO SECTION ═══════════════════ -->
+        <section id="inicio" class="relative min-h-[95vh] flex items-center overflow-hidden">
+            <!-- Background -->
+            <div class="absolute inset-0 z-0">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=60&w=800&auto=format&fit=crop">
+                    <source media="(max-width: 1200px)" srcset="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1920&auto=format&fit=crop" 
+                         alt="" 
+                         class="w-full h-full object-cover"
+                         loading="eager"
+                         fetchpriority="high"
+                         decoding="async"
+                         aria-hidden="true">
+                </picture>
+                <div class="absolute inset-0 bg-gradient-to-r from-neutral-bg-light via-neutral-bg-light/90 to-neutral-bg-light/30 dark:from-neutral-bg-dark dark:via-neutral-bg-dark/90 dark:to-neutral-bg-dark/30"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-neutral-bg-light/50 dark:to-neutral-bg-dark/50"></div>
+            </div>
+            
+            <!-- Content -->
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 sm:py-20 lg:py-24">
+                <div class="max-w-2xl xl:max-w-3xl">
+                    
+                    <!-- Badge -->
+                    <div class="reveal stagger-1">
+                        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-secondary-100/80 dark:bg-secondary-900/40 border border-secondary-200/50 dark:border-secondary-700/30 backdrop-blur-sm mb-8">
+                            <span class="relative flex h-2.5 w-2.5">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary-500"></span>
+                            </span>
+                            <span class="text-xs font-bold uppercase tracking-widest text-secondary-700 dark:text-secondary-300">Fabricantes Directos</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Heading -->
+                    <h1 class="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gray-900 dark:text-white mb-6 leading-[1.05] tracking-tight reveal stagger-2">
+                        Creamos el<br>
+                        <span class="relative inline-block text-primary-600 dark:text-primary-400">
+                            alma de tu hogar
+                            <svg class="absolute -bottom-2 left-0 w-full h-4 text-secondary-400/60" viewBox="0 0 200 12" fill="none" preserveAspectRatio="none" aria-hidden="true">
+                                <path d="M2 9C30 5 70 2 100 5C130 8 170 4 198 2" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                    </h1>
+                    
+                    <!-- Description -->
+                    <p class="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed border-l-4 border-secondary-400 pl-5 reveal stagger-3">
+                        Especialistas en estilo nórdico e industrial. Desde mesitas de luz hasta cocinas completas a medida. <strong class="text-gray-900 dark:text-white font-semibold">Madera maciza</strong>, diseño funcional y calidad artesanal argentina.
+                    </p>
+                    
+                    <!-- CTAs -->
+                    <div class="flex flex-col xs:flex-row gap-4 mb-12 reveal stagger-4">
+                        <a href="#productos" class="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-7 sm:px-8 py-4 rounded-xl font-bold shadow-xl shadow-primary-500/25 hover:shadow-2xl hover:shadow-primary-500/30 hover:-translate-y-1 transition-all duration-300 btn-shine">
+                            <span>Ver Catálogo</span>
+                            <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
+                        </a>
+                        <a href="#amedida" class="group inline-flex items-center justify-center gap-3 bg-white dark:bg-neutral-surface-dark border-2 border-gray-200 dark:border-gray-700 hover:border-primary-400 dark:hover:border-primary-500 text-gray-900 dark:text-white px-7 sm:px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300">
+                            <span class="material-symbols-outlined text-xl text-primary-500" aria-hidden="true">design_services</span>
+                            <span>Proyectos a Medida</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Trust Badges -->
+                    <div class="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-gray-500 dark:text-gray-400 reveal stagger-5">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary-500 text-xl" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">verified</span>
+                            <span>+500 proyectos</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary-500 text-xl" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+                            <span>4.9 valoración</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary-500 text-xl" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">local_shipping</span>
+                            <span>Envíos a todo el país</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-gray-400 dark:text-gray-500 animate-bounce-subtle">
+                <span class="text-xs font-semibold uppercase tracking-widest">Scroll</span>
+                <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+            </div>
+        </section>
+
+        <!-- ═══════════════════ FEATURES BAR ═══════════════════ -->
+        <section class="py-14 sm:py-16 lg:py-20 bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 relative overflow-hidden" aria-labelledby="features-heading">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-10" aria-hidden="true">
+                <div class="absolute inset-0" style="background-image: radial-gradient(rgba(255,255,255,0.8) 1px, transparent 1px); background-size: 20px 20px;"></div>
+            </div>
+            <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" aria-hidden="true"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary-400/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" aria-hidden="true"></div>
+            
+            <h2 id="features-heading" class="sr-only">Nuestras características</h2>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 text-white">
+                    
+                    <div class="flex items-start gap-4 reveal stagger-1">
+                        <div class="flex-shrink-0 w-14 h-14 bg-white/15 rounded-2xl flex items-center justify-center shadow-inner-glow backdrop-blur-sm">
+                            <span class="material-symbols-outlined text-2xl" aria-hidden="true">carpenter</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Fabricación Artesanal</h3>
+                            <p class="text-white/70 text-sm leading-relaxed">Cada mueble construido a mano por ebanistas expertos con más de 15 años de experiencia.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4 reveal stagger-2">
+                        <div class="flex-shrink-0 w-14 h-14 bg-white/15 rounded-2xl flex items-center justify-center shadow-inner-glow backdrop-blur-sm">
+                            <span class="material-symbols-outlined text-2xl" aria-hidden="true">straighten</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">A Tu Medida</h3>
+                            <p class="text-white/70 text-sm leading-relaxed">Adaptamos dimensiones, materiales y acabados a tu espacio y necesidades.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4 reveal stagger-3">
+                        <div class="flex-shrink-0 w-14 h-14 bg-white/15 rounded-2xl flex items-center justify-center shadow-inner-glow backdrop-blur-sm">
+                            <span class="material-symbols-outlined text-2xl" aria-hidden="true">forest</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Maderas Nobles</h3>
+                            <p class="text-white/70 text-sm leading-relaxed">Petiribí, Paraíso, Guayubira y Laurel de forestación responsable.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4 reveal stagger-4">
+                        <div class="flex-shrink-0 w-14 h-14 bg-white/15 rounded-2xl flex items-center justify-center shadow-inner-glow backdrop-blur-sm">
+                            <span class="material-symbols-outlined text-2xl" aria-hidden="true">verified</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Garantía Total</h3>
+                            <p class="text-white/70 text-sm leading-relaxed">Respaldamos cada pieza que fabricamos. Tu satisfacción es nuestra prioridad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Placeholder para las demás secciones que serán renderizadas por JS -->
+        <section id="productos" class="py-20 md:py-28" aria-labelledby="productos-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 reveal">
+                    <span class="inline-block text-secondary-500 font-bold text-sm uppercase tracking-widest mb-3">Catálogo</span>
+                    <h2 id="productos-heading" class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">¿Qué estás buscando?</h2>
+                    <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">Explorá nuestra colección de muebles nórdicos fabricados con los mejores materiales.</p>
+                </div>
+                
+                <!-- Category Pills -->
+                <div id="category-pills" class="flex flex-wrap justify-center gap-3 mb-14 reveal" role="tablist" aria-label="Categorías de productos"></div>
+                
+                <!-- Products Grid -->
+                <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8" role="list" aria-label="Lista de productos"></div>
+                
+                <!-- Load More -->
+                <div class="mt-14 text-center">
+                    <button id="load-more-btn" class="inline-flex items-center gap-2 bg-white dark:bg-neutral-surface-dark border-2 border-gray-200 dark:border-gray-700 hover:border-primary-400 dark:hover:border-primary-500 text-gray-700 dark:text-gray-200 px-8 py-4 rounded-xl font-bold hover:shadow-lg transition-all duration-300">
+                        <span>Cargar más productos</span>
+                        <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════ A MEDIDA ═══════════════════ -->
+        <section id="amedida" class="py-24 md:py-32 bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 text-white relative overflow-hidden" aria-labelledby="amedida-heading">
+            <div class="absolute inset-0 opacity-10" aria-hidden="true">
+                <div class="absolute inset-0" style="background-image: radial-gradient(rgba(255,255,255,0.8) 2px, transparent 2px); background-size: 32px 32px;"></div>
+            </div>
+            <div class="absolute top-0 right-0 w-128 h-128 bg-secondary-400/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" aria-hidden="true"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    
+                    <!-- Images -->
+                    <div class="order-2 lg:order-1 reveal-left">
+                        <div class="grid grid-cols-2 gap-4 md:gap-6">
+                            <div class="transform translate-y-8">
+                                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=600&auto=format&fit=crop" 
+                                     alt="Cocina moderna a medida con acabados en madera clara" 
+                                     class="w-full rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-500 cursor-pointer"
+                                     loading="lazy"
+                                     decoding="async"
+                                     onclick="LightboxManager.open(this.src, this.alt)">
+                            </div>
+                            <div class="transform -translate-y-8">
+                                <img src="https://images.unsplash.com/photo-1595515106968-4319803d5264?q=80&w=600&auto=format&fit=crop" 
+                                     alt="Vestidor placard diseñado a medida" 
+                                     class="w-full rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-500 cursor-pointer"
+                                     loading="lazy"
+                                     decoding="async"
+                                     onclick="LightboxManager.open(this.src, this.alt)">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="order-1 lg:order-2 space-y-8 reveal-right">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 border border-white/20 backdrop-blur-sm">
+                            <span class="material-symbols-outlined text-secondary-300" aria-hidden="true">kitchen</span>
+                            <span class="text-sm font-bold uppercase tracking-wider">Especialistas en Obras</span>
+                        </div>
+                        
+                        <h2 id="amedida-heading" class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+                            Cocinas y Vestidores<br>
+                            <span class="text-secondary-300">Diseñados para Vos</span>
+                        </h2>
+                        
+                        <p class="text-white/80 text-lg leading-relaxed">
+                            No solo vendemos muebles sueltos. Somos expertos en equipamiento integral: cocinas bajo mesada, alacenas, islas y placares de piso a techo. Cada proyecto es único y lo diseñamos pensando en vos.
+                        </p>
+                        
+                        <ul class="space-y-4" role="list">
+                            <li class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-secondary-300 flex-shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">check_circle</span>
+                                <span><strong>Medición a domicilio</strong> y renderizado 3D antes de fabricar.</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-secondary-300 flex-shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">check_circle</span>
+                                <span><strong>Materiales premium:</strong> Melamina MDF 18mm, Paraíso, Laqueados.</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-secondary-300 flex-shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">check_circle</span>
+                                <span><strong>Herrajes de primera:</strong> Guías telescópicas con cierre suave.</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-secondary-300 flex-shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">check_circle</span>
+                                <span><strong>Instalación profesional</strong> incluida en todos los proyectos.</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                            <a href="https://wa.me/5492604364497?text=Hola,%20me%20interesa%20un%20presupuesto%20para%20un%20proyecto%20a%20medida" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="inline-flex items-center justify-center gap-3 bg-secondary-400 hover:bg-secondary-500 text-white text-lg font-bold px-8 py-4 rounded-xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                                <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
+                                Agendar Visita Técnica
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secciones adicionales: Galería, Testimonios, Cotizador, Contacto -->
+        <!-- Se cargan dinámicamente vía JavaScript para mejor performance -->
+        
+        <section id="galeria" class="py-20 md:py-28 bg-gray-50 dark:bg-neutral-surface-dark" aria-labelledby="galeria-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-12 reveal">
+                    <div>
+                        <span class="inline-block text-secondary-500 font-bold text-sm uppercase tracking-widest mb-3">Portfolio</span>
+                        <h2 id="galeria-heading" class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white">Trabajos Realizados</h2>
+                    </div>
+                </div>
+                <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" role="list" aria-label="Galería de trabajos"></div>
+            </div>
+        </section>
+
+        <section id="testimonios" class="py-20 md:py-28" aria-labelledby="testimonios-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-12 reveal">
+                    <div>
+                        <span class="inline-block text-secondary-500 font-bold text-sm uppercase tracking-widest mb-3">Testimonios</span>
+                        <h2 id="testimonios-heading" class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white">Lo que dicen nuestros clientes</h2>
+                    </div>
+                    <div class="flex gap-2">
+                        <button id="testimonial-prev" class="p-3 rounded-full border border-gray-200 dark:border-gray-700 text-gray-500 hover:bg-primary-500 hover:border-primary-500 hover:text-white transition-all" aria-label="Testimonio anterior">
+                            <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+                        </button>
+                        <button id="testimonial-next" class="p-3 rounded-full border border-gray-200 dark:border-gray-700 text-gray-500 hover:bg-primary-500 hover:border-primary-500 hover:text-white transition-all" aria-label="Siguiente testimonio">
+                            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+                <div id="testimonials-carousel" class="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4 -mx-4 px-4" role="list" aria-label="Carrusel de testimonios"></div>
+            </div>
+        </section>
+
+        <section id="cotizador" class="py-20 md:py-28 bg-gray-50 dark:bg-neutral-surface-dark" aria-labelledby="cotizador-heading">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white dark:bg-neutral-bg-dark rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-100 dark:border-gray-800 reveal">
+                    <div class="text-center mb-10">
+                        <div class="inline-flex items-center justify-center w-20 h-20 bg-primary-100 dark:bg-primary-900/30 rounded-2xl mb-6">
+                            <span class="material-symbols-outlined text-4xl text-primary-600 dark:text-primary-400" aria-hidden="true">calculate</span>
+                        </div>
+                        <h2 id="cotizador-heading" class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-3">Cotizador Rápido</h2>
+                        <p class="text-gray-500 dark:text-gray-400 max-w-md mx-auto">Completá el formulario y te contactamos con una propuesta personalizada en menos de 24hs.</p>
+                    </div>
+                    <form id="quote-form" class="space-y-6" novalidate></form>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="py-20 md:py-28" aria-labelledby="contacto-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14 reveal">
+                    <span class="inline-block text-secondary-500 font-bold text-sm uppercase tracking-widest mb-3">Contacto</span>
+                    <h2 id="contacto-heading" class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4">Visitanos o Escribinos</h2>
+                    <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">Estamos en San Rafael, Mendoza. Atendemos de lunes a sábado con cita previa.</p>
+                </div>
+                <div id="contact-cards" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12" role="list"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ╔══════════════════════════════════════════════════════════════════════╗
+         ║                            FOOTER                                    ║
+         ╚══════════════════════════════════════════════════════════════════════╝ -->
+    <footer class="bg-gray-900 dark:bg-black text-white pt-16 pb-8" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div class="lg:col-span-2">
+                    <a href="/" class="flex items-center gap-3 mb-6">
+                        <div class="w-11 h-11 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center">
+                            <span class="material-symbols-outlined text-2xl text-white" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">chair</span>
+                        </div>
+                        <div>
+                            <span class="text-xl font-extrabold block leading-none">LEGADO</span>
+                            <span class="text-2xs font-bold tracking-[0.25em] uppercase text-secondary-400">Muebles</span>
+                        </div>
+                    </a>
+                    <p class="text-gray-400 leading-relaxed mb-6 max-w-md">
+                        Transformamos madera y materiales nobles en piezas que perduran. Diseño nórdico y calidad artesanal fabricada en Argentina desde hace más de 15 años.
+                    </p>
+                    <div class="flex gap-3" id="footer-social"></div>
+                </div>
+                
+                <!-- Navigation -->
+                <div>
+                    <h3 class="font-bold text-lg mb-5">Navegación</h3>
+                    <ul class="space-y-3" role="list">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="#productos" class="text-gray-400 hover:text-white transition-colors">Productos</a></li>
+                        <li><a href="#amedida" class="text-gray-400 hover:text-white transition-colors">A Medida</a></li>
+                        <li><a href="#galeria" class="text-gray-400 hover:text-white transition-colors">Galería</a></li>
+                        <li><a href="#testimonios" class="text-gray-400 hover:text-white transition-colors">Testimonios</a></li>
+                        <li><a href="#cotizador" class="text-gray-400 hover:text-white transition-colors">Cotizador</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Payment -->
+                <div>
+                    <h3 class="font-bold text-lg mb-5">Métodos de Pago</h3>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1.5 bg-white/10 rounded-lg text-sm">Efectivo</span>
+                        <span class="px-3 py-1.5 bg-white/10 rounded-lg text-sm">Transferencia</span>
+                        <span class="px-3 py-1.5 bg-white/10 rounded-lg text-sm">Tarjetas</span>
+                        <span class="px-3 py-1.5 bg-white/10 rounded-lg text-sm">Ahora 12/18</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Consultá por planes de financiación sin interés.</p>
+                </div>
+            </div>
+            
+            <!-- Bottom -->
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">© <span id="current-year"></span> Legado Muebles. Todos los derechos reservados.</p>
+                <div class="flex gap-6 text-sm">
+                    <a href="/privacidad" class="text-gray-500 hover:text-white transition-colors">Privacidad</a>
+                    <a href="/terminos" class="text-gray-500 hover:text-white transition-colors">Términos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ╔══════════════════════════════════════════════════════════════════════╗
+         ║                        WHATSAPP BUTTON                               ║
+         ╚══════════════════════════════════════════════════════════════════════╝ -->
+    <a href="https://wa.me/5492604364497?text=Hola,%20vi%20su%20página%20web%20y%20me%20interesa%20consultar%20por..." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       id="whatsapp-btn"
+       class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-lg shadow-green-500/30 hover:shadow-xl hover:shadow-green-500/40 hover:scale-110 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center group no-print"
+       aria-label="Contactar por WhatsApp">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="absolute right-full mr-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm font-bold py-2.5 px-4 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-all whitespace-nowrap pointer-events-none">
+            ¿Consultas? ¡Escribinos!
+        </span>
+    </a>
+
+    <!-- ╔══════════════════════════════════════════════════════════════════════╗
+         ║                          LIGHTBOX                                    ║
+         ╚══════════════════════════════════════════════════════════════════════╝ -->
+    <div id="lightbox" class="lightbox no-print" role="dialog" aria-modal="true" aria-label="Vista ampliada de imagen">
+        <button id="lightbox-close" class="absolute top-4 right-4 sm:top-6 sm:right-6 p-3 text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-all z-10" aria-label="Cerrar">
+            <span class="material-symbols-outlined text-3xl" aria-hidden="true">close</span>
+        </button>
+        <img id="lightbox-img" src="" alt="" class="lightbox__img">
+    </div>
+
+    <!-- ╔══════════════════════════════════════════════════════════════════════╗
+         ║                           TOAST                                      ║
+         ╚══════════════════════════════════════════════════════════════════════╝ -->
+    <div id="toast" class="toast no-print" role="alert" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- ╔══════════════════════════════════════════════════════════════════════╗
+         ║                         SCRIPTS                                      ║
+         ╚══════════════════════════════════════════════════════════════════════╝ -->
+    
+    <!-- Critical inline JS for instant theme -->
+    <script>
+        (function(){
+            const t = localStorage.getItem('legado_theme');
+            const p = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.classList.toggle('dark', t === 'dark' || (!t && p));
+            document.documentElement.classList.toggle('light', t === 'light' || (!t && !p));
+        })();
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    
+    <!-- Main JavaScript -->
+    <script src="main.js" defer></script>
+</body>
+</html>
